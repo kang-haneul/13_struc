@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-
+#include <string.h>
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
 struct student{
@@ -12,20 +12,16 @@ double grade;
 };
 
 
-int main(int argc, char *argv[]) {
+void main(int argc, char *argv[]) {
 	
-		
-	struct student s1 = {24, "kang han eul", 4.3};
-	struct student s2 = {24, "kang han eul", 4.3};
-	struct student s3 = {24, "kang han eul", 4.3};
-	struct student s4 = {24, "kang han eul", 4.3};
-	struct student s5 = {24, "kang han eul", 4.3};
-	struct student s6 = {24,"kang han eul", 4.3};
-	struct student s7 = {24, "kang han eul", 4.3};
-	struct student s8 = {24, "kang han eul", 4.3};
-	struct student s9 = {24, "kang han eul", 4.3};
-	struct student s10 = {24, "kang han eul", 4.3};
+	struct student s1 = {1911316, "kang han eul", 4.3};
+	s1.ID = 123456;
+	strcpy(s1.name,"kang");
+	s1.grade = 4.3;
 	
+	printf("ID : %d\n",s1.ID);
+	printf("name : %s\n",s1.name);
+	printf("grade : %f\n",s1.grade);
 	
-	return 0;
+
 }
