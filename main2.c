@@ -1,11 +1,22 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include "keywords.h"
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
 int is_whitespace(char c){
 	
-	if
+	if(c==' '||
+		c=='\n'||
+		c== '\r'||
+		c=='\t' ||
+		c=='(' )
+		
+		{ 
+		return 1;
+		
+		}
+		
 }
 
 int fget_word(FILE* fp, char *word)
@@ -60,6 +71,15 @@ int main(int argc, char *argv[]) {
 		
 		return -1;	
 	}
+	
+	while (fget_word(fp,word) !=0)
+	{
+		count_word(word);
+	}
+	
+	print_word();
+	
+	
 	fclose(fp);
 
 	
